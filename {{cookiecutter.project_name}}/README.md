@@ -14,6 +14,8 @@
 [tests]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions?workflow=Tests
 [black]: https://github.com/psf/black
 
+How about changes to this readme?
+
 TODO: Add a short description of the project.
 
 ## Installation
@@ -57,6 +59,6 @@ To see more examples, see the [documentation].
 [API Reference]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/references.html
 [FAQ]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/faq.html
 [github issue tracker]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues
-[github discussions]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}/discussions
+[github discussions]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/discussions
 
 

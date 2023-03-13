@@ -6,6 +6,10 @@
 /docs/_build/
 /src/*.egg-info/
 __pycache__/
+.venv
+
+# VSCode
+.vscode/
 
 # MacOS
 .DS_Store
