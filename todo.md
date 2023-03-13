@@ -34,3 +34,5 @@ Add a guide on how to add the CLI to the package.
 
 - [ ] finalize the guide.md with missing documentation
 - [ ] Add quickguide.md
+
+Make sure that ruff's autofix does not remove unused imports.

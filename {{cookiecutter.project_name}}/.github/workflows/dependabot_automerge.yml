@@ -1,7 +1,6 @@
 # GitHub action to automerge dependabot PRs. Only merges if tests passes the
 # branch protections in the repository settings.
 # You can set branch protections in the repository under Settings > Branches > Add rule
-
 name: automerge-bot-prs
 
 on: pull_request
@@ -22,10 +21,10 @@ jobs:
         run: gh pr merge --auto --merge "$PR_URL" # Use Github CLI to merge automatically the PR
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
-          GH_TOKEN: ${{ secrets.AUTOMERGE }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Auto approve dependabot PRs
         if: ${{ github.actor == 'dependabot[bot]' }}
         uses: hmarr/auto-approve-action@v3.1.0
         with:
-          github-token: ${{ secrets.AUTOMERGE }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

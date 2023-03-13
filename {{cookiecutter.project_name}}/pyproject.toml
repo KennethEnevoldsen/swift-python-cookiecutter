@@ -12,15 +12,14 @@ classifiers = [
     "Operating System :: MacOS :: MacOS X",
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
 ]
 
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 dependencies = [
-    # add you dependencies here (e.g. "numpy>=1.20.0,<1.21.0")
+  "pydantic>=1.10.0,<1.11.0",
 ]
 
 [project.license]
@@ -33,11 +32,12 @@ repository = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.pro
 documentation = "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/"
 
 [project.optional-dependencies]
-style = [
+dev = [
     "black==22.12.0",
     "pre-commit==2.20.0,<2.21.0",
     "ruff==0.0.191",
-    "mypy==0.991"
+    "mypy==0.991",
+    "cruft>=2.12.0,<2.13.0",
 ]
 tests = [
     "pytest>=7.1.3,<7.3.0",
@@ -89,16 +89,19 @@ exclude_lines = [
 [tool.setuptools]
 include-package-data = true
 
+
+
 [tool.mypy]
 ignore_missing_imports = true
 no_implicit_optional = true
+warn_unused_ignores = true
+warn_unreachable = true
+plugins = "pydantic.mypy"
 
-[tool.semantic_release]
-branch = "main"
-version_variable = [
-    "pyproject.toml:version"
-]
-build_command = "python -m pip install build; python -m build"
+[tool.pydantic-mypy]
+init_typed = true
+warn_untyped_fields = true
+
 
 [tool.ruff]
 exclude = [
@@ -107,3 +110,18 @@ exclude = [
     ".git",
     "__pycache__",
 ]
+
+[tool.ruff.isort]
+known-third-party = ["wandb"]
+
+[tool.semantic_release]
+branch = "main"
+version_variable = [
+  "pyproject.toml:version"
+]
+upload_to_pypi = true
+upload_to_release = true
+build_command = "python -m pip install build; python -m build"
+
+[tool.setuptools]
+include-package-data = true
