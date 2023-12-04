@@ -6,14 +6,12 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/{{cookiecutter.project_name}})][pypi status]
 [![documentation](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/documentation.yml/badge.svg)][documentation]
 [![Tests](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/tests.yml/badge.svg)][tests]
-[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)]([ruff])
 
 
 [pypi status]: https://pypi.org/project/{{cookiecutter.project_name}}/
 [documentation]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/
 [tests]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions?workflow=Tests
-[black]: https://github.com/psf/black
 [ruff]: https://github.com/astral-sh/ruff
 
 

@@ -4,7 +4,7 @@
 
 ## How do I test the code?
 
-This package comes with a test suite implemented using [pytest].
+This package comes with a test suite which you can run using implemented using [pytest].
 In order to run the tests, you have to clone the repository and install the package.
 This will also install the required tests dependencies
 and test utilities defined in the extras_require section of the :code:`pyproject.toml`.
@@ -36,8 +36,7 @@ python -m pytest --cov=src
 
 ## How is the documentation generated?
 
-This package use [sphinx] to generate documentation. It uses the [Furo] theme with
-custom styling.
+This package use [mkdocs] with the [material] theme to generate the documentation.
 
 To make the documentation you can run:
 
@@ -47,14 +46,20 @@ To make the documentation you can run:
 pip install -e ".[docs]"
 
 # generate html from documentations
-sphinx-build -b html docs docs/_build/html
+make build-docs
+```
+
+If you wish to view the documentation in your browser you can run:
+
+```bash
+make docs-view
 ```
 
 ### Credits
 
 This project was generated from the [Swift Python Cookiecutter] template.
 
-[swift python cookiecutter]: https://github.com/MartinBernstorff/swift-python-cookiecutter
+[swift python cookiecutter]: https://github.com/kennethenevoldsen/swift-python-cookiecutter
 [file an issue]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues
-[sphinx]: https://www.sphinx-doc.org/en/master/index.html
-[Furo]: https://github.com/pradyunsg/furo
+[mkdocs]: https://www.mkdocs.org/getting-started/
+[material]: https://squidfunk.github.io/mkdocs-material/

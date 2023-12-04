@@ -52,14 +52,13 @@ Where `repository url` is a link to an empty repository.
 The template comes with a few GitHub actions. These are:
 
 * `lint.yml` - Runs `make lint` on all pushes to the repository.
-* `documentation.yml` - Runs `` on all pushes to the repository.
+* `documentation.yml` - Runs `make build-docs` on all pushes to the repository.
 * `release.yml` - Run semantic release on all pushes to the repository. If the commit contains either "fix:" for "feat:" it will bump the version id.
 This will publish the package to pypi as well as create a release on GitHub.
 
 **Note**:  `release.yml` requires a github secret and a that you have set up trusted publishing on pypi. See more in the documentation within the file.
 
 If do not wish to pypi, you can just delete the `release.yml` file.
-
 
 
 ## FAQ:
@@ -82,6 +81,16 @@ For the repository settings I usually recommend the following:
          * pre-commit (formatting)
          * pytest (tests)
      * Require conversation resolution before merging
+
+### Why don't you use poetry?
+Poetry is a great tool, but I find that it is not as widely used as pip and setuptools.
+You are more than welcome to use poetry instead of pip and setuptools, but I have chosen to use pip and setuptools for this template as due to
+the wider adoption.
+
+### Why don't you use black?
+I really like Black it is a wonderful too. However ruff implements almost the same functionality and more at the same speed or faster.
+This also means that you do not need to install an extra dependency.
+
 
 ## Authors
 - Kenneth Enevoldsen
