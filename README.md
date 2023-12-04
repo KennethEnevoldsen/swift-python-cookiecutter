@@ -26,9 +26,9 @@ make update-from-template
 The template comes with a Makefile containing a few commands to help you get started. You are of course free to change these as you see fit.
 
 - `make install` - Install the package in editable mode with all dependencies.
-- `make lint` - Check that the `pyproject.toml` file is valid and then run `black` and `ruff`.
-- `make test` - Run `pytest` with coverage.
-- `make static-type-checks` - Run `pyright` to check for type errors.
+- `make lint` - Check that the `pyproject.toml` file is valid and then run [ruff] for formatting and linting.
+- `make test` - Run [pytest] with coverage.
+- `make static-type-checks` - Run [pyright] to check for type errors.
 - `make pr` - a utility command to run `make lint`, `make test` and `make static-type-checks` in one go. This command is intended to be run before a PR is created.
 - `make build-docs` and `docs-view` - Build the documentation and open it in your browser, respectively.
 - `make update-from-template` - Update the template files using `cruft`.
@@ -76,10 +76,6 @@ For the repository settings I usually recommend the following:
    * Add a branch protection rule for "main"
      * Require a pull request before merging
      * Require status checks to pass before merging
-       * Status checks that are required:
-         * static_type_checks (type hinting)
-         * pre-commit (formatting)
-         * pytest (tests)
      * Require conversation resolution before merging
 
 ### Why don't you use poetry?
@@ -96,3 +92,7 @@ This also means that you do not need to install an extra dependency.
 - Kenneth Enevoldsen
 - Martin Bernstorff
 
+
+[ruff]: https://docs.astral.sh/ruff/
+[pytest]: https://docs.pytest.org/en/7.4.x/
+[pyright]: https://github.com/microsoft/pyright
