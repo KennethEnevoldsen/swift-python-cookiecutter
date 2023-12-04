@@ -1,4 +1,4 @@
-site_name: { { cookiecutter.friendly_name } }
+site_name: {{ cookiecutter.friendly_name }}
 docs_dir: "docs/"
 repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
 watch: [src/, docs/]
