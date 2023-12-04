@@ -1,6 +1,6 @@
 site_name: { { cookiecutter.friendly_name } }
 docs_dir: "docs/"
-repo_url: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}
+repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
 watch: [src/, docs/]
 edit_uri: "blob/main/docs/"
 theme:
@@ -64,4 +64,4 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}
+      link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
