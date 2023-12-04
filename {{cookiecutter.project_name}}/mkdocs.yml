@@ -36,7 +36,7 @@ markdown_extensions:
   - toc:
       permalink: true
 
-copyright: Copyright &copy; {{cookiecutter.year}} {{cookiecutter.author}}
+copyright: Copyright &copy; {{cookiecutter.copyright_year}} {{cookiecutter.author}}
 
 nav:
   - Package:
@@ -44,7 +44,7 @@ nav:
       - Installation: installation.md
       - tutorials.md
   - API:
-    - api.md
+      - api.md
 
 plugins:
   - mkdocs-jupyter
