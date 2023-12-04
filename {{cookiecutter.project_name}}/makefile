@@ -9,8 +9,8 @@ static-type-check:
 lint:
 	@echo "--- 🧹 Running linters ---"
 	pyproject-parser check pyproject.toml 		# check pyproject.toml
-	black .  									# running black
-	ruff . --fix  								# running ruff
+	ruff format .  								# running ruff formatting
+	ruff . --fix  								# running ruff linting
 
 test:
 	@echo "--- 🧪 Running tests ---"

@@ -31,5 +31,4 @@ jobs:
       - name: Cruft create
         run: |
           # Using invoke allows testing locally as well
-          pip install cruft
           make test
