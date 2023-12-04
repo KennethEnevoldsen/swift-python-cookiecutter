@@ -6,17 +6,14 @@ on:
 
 jobs:
   create-template-instance:
-    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest] # macos-latest
+        os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: ["3.9"] # , "3.10"]
-
-    # runs-on: ubuntu-latest
-    concurrency:
-      group: "${{ github.workflow }} @ ${{ github.ref }} with ${{ matrix.python-version }} on ${{ matrix.os}}"
-      cancel-in-progress: true
-
+    
+    runs-on: ${{ matrix.os }}
+        
+        
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -34,5 +31,5 @@ jobs:
       - name: Cruft create
         run: |
           # Using invoke allows testing locally as well
-          pip install invoke==2.1.1
-          inv test
+          pip install cruft
+          make test
