@@ -8,6 +8,5 @@ This is a sample API page. Feel free to delete it.
 
 and here is the function documentation:
 
-```{eval-rst}
-.. autofunction:: {{cookiecutter.project_name}}.docs_example.sample_function
-```
+
+::: {{cookiecutter.project_name}}.docs_example.sample_function

@@ -11,6 +11,7 @@ create-new-project:
 run-all-tests-in-project:
 	@echo "--- 🧪 Running all tests in project ---"
 	
+	make -C swift-python install
 	make -C swift-python test
 	make -C swift-python lint
 	make -C swift-python static-type-check
