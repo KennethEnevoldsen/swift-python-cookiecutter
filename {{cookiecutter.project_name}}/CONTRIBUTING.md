@@ -11,7 +11,7 @@ Here is a list of important resources for contributors:
 - [Issue Tracker]
 - [Code of Conduct]
 
-[{{cookiecutter.license.replace("-", " ").lower()}} license]: https://opensource.org/licenses/{{cookiecutter.license}}
+[MIT license]: https://opensource.org/licenses/MIT
 [source code]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
 [documentation]: https://{{cookiecutter.project_name}}.readthedocs.io/
 [issue tracker]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues
