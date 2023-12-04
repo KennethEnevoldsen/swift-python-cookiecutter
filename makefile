@@ -14,7 +14,7 @@ run-all-tests-in-project:
 	make -C swift-python test
 	make -C swift-python lint
 	make -C swift-python static-type-check
-	make -C swift-python doc-build
+	make -C swift-python build-docs
 
 lint:
 	@echo "--- 🚀 Linting project ---"

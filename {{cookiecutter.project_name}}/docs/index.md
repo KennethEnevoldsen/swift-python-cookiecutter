@@ -1,7 +1,3 @@
----
-hide-toc: true
----
-
 # {{ cookiecutter.friendly_name }}
 
 
