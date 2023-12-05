@@ -9,4 +9,4 @@ This is a sample API page. Feel free to delete it.
 and here is the function documentation:
 
 
-::: {{cookiecutter.project_name}}.docs_example.sample_function
+::: {{cookiecutter.package_name}}.docs_example.sample_function
