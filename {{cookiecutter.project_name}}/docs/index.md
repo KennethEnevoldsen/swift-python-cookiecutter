@@ -1,87 +1,43 @@
 # {{ cookiecutter.friendly_name }}
 
 
-```{include} ../README.md
-:start-after: <!-- start short-description -->
-:end-before: <!-- end short-description -->
-```
-
----
-
-````{grid} 1 1 2 2
-:class-container: tuto-section-2
-```{grid-item-card} 🔧 Installation
-:link: installation
-:link-type: doc
-
-Installation instructions on how to install this package
-```
-
-```{grid-item-card} 👩‍💻 Tutorials
-:link: tutorials
-:link-type: doc
-
-Tutorials to get you started uisng this package
-```
-
-```{grid-item-card} 📚 FAQ
-:link: tutorials
-:link-type: doc
-
-Frequently asked questions and answers
-```
-
-```{grid-item-card} 🚨 Bug Reports
-:link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues
-
-Found a bug? Please report it as an issue
-```
-
-```{grid-item-card} 🎁 Feature Requests & Ideas
-:link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues
-
-Have an idea for a new feature? Feel free to create an issue 
-```
-
-```{grid-item-card} 👩‍💻 Usage Questions
-:link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/discussions
-
-Do you have a question about how to use this package? Feel to use the discussion forum
-```
-
-```{grid-item-card} 🗯 General Discussion
-:link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/discussions
-
-For genral dicussion about this package, please use the discussion forum
-```
-
-```{grid-item-card} 📝 Contributing
-:link: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/blob/main/CONTRIBUTING.md
-
-If you would like to contribute to this package, please read the contributing guidelines
-```
-````
+[![PyPI](https://img.shields.io/pypi/v/{{cookiecutter.project_name}}.svg)][pypi status]
+[![Python Version](https://img.shields.io/pypi/pyversions/{{cookiecutter.project_name}})][pypi status]
+[![documentation](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/documentation.yml/badge.svg)][documentation]
+[![Tests](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/tests.yml/badge.svg)][tests]
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)]([ruff])
 
 
-```{toctree}
-:hidden:
-:caption: Getting Started
+[pypi status]: https://pypi.org/project/{{cookiecutter.project_name}}/
+[documentation]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/
+[tests]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions?workflow=Tests
+[ruff]: https://github.com/astral-sh/ruff
 
-installation
-tutorials
-faq
-```
 
-```{toctree}
-:caption: API
-:hidden:
-api/docs_example
-```
+<!-- start short-description -->
 
-```{toctree}
-:caption: GitHub
-:hidden:
+TODO: Add a short description of the project.
 
-Changelog <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/changelog.md>
-GitHub <https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}>
-```
+<!-- end short-description -->
+
+
+
+# 💬 Where to ask questions
+
+| Type                           |                        |
+| ------------------------------ | ---------------------- |
+| 📚 **FAQ**                      | [FAQ]                  |
+| 🚨 **Bug Reports**              | [GitHub Issue Tracker] |
+| 🎁 **Feature Requests & Ideas** | [GitHub Issue Tracker] |
+| 👩‍💻 **Usage Questions**          | [GitHub Discussions]   |
+| 🗯 **General Discussion**       | [GitHub Discussions]   |
+
+[Installation]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/installation.html
+[Tutorials]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/tutorials.html
+[API Reference]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/references.html
+[FAQ]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/faq.html
+[github issue tracker]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues
+[github discussions]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/discussions
+
+
+

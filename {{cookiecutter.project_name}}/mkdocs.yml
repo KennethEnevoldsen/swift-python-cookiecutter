@@ -1,4 +1,4 @@
-site_name: { { cookiecutter.friendly_name } }
+site_name: {{ cookiecutter.friendly_name }}
 docs_dir: "docs/"
 repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
 watch: [src/, docs/]
@@ -42,7 +42,8 @@ nav:
   - Package:
       - Overview: index.md
       - Installation: installation.md
-      - tutorials.md
+      - Tutorials:
+          - tutorials/usage.ipynb
   - API References:
       - api/docs_example.md
 
@@ -54,13 +55,12 @@ plugins:
         python:
           paths: [src]
           type: python
-          root_package: { { cookiecutter.package_name } }
+          root_package: {{ cookiecutter.package_name }}
           docstring_style: google
           options:
             heading_level: 3
             show_source: true
             show_root_heading: true
-
 
 extra:
   social:
