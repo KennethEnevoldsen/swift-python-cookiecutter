@@ -1,8 +1,10 @@
 name: Test creating an instance of the template
 
 on:
+  push:
+    branches: [main]
   pull_request:
-    types: [opened, synchronize]
+    branches: [main]
 
 jobs:
   create-template-instance:
