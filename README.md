@@ -88,6 +88,11 @@ I really like Black it is a wonderful too. However ruff implements almost the sa
 This also means that you do not need to install an extra dependency.
 
 
+## Example project using this template
+
+- [The Scandinavian Embedding Benchmark](https://github.com/KennethEnevoldsen/Scandinavian-Embedding-Benchmark): A benchmark for evaluating embeddings for Scandinavian languages.
+- [DaCy](https://github.com/centre-for-humanities-computing/DaCy): A spaCy pipeline for Danish NLP.
+
 ## Authors
 - Kenneth Enevoldsen
 - Martin Bernstorff
