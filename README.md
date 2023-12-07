@@ -63,14 +63,14 @@ If do not wish to pypi, you can just delete the `release.yml` file.
 
 ## FAQ:
 
-### Why don't you use pre-commit hooks?
+- **Why don't you use pre-commit hooks?**
 Pre-commit hooks can be great, but I find that I often want to commit something that does not pass the pre-commit hooks.
 It also leads you to have two sets of dependencies, one for the pre-commit hooks and one for the actual package, which might be different and lead to problems and conflicts such as conflicting formatters.
 
-### Why do you presume the MIT license?
+- **Why do you presume the MIT license?**
 It is always a good idea to consider your license before you start writing code. Luckily it is very easy to delete.
 
-### What is your recommend setup for the repository?
+- **What is your recommend setup for the repository?**
 For the repository settings I usually recommend the following:
  * Branches
    * Add a branch protection rule for "main"
@@ -78,12 +78,12 @@ For the repository settings I usually recommend the following:
      * Require status checks to pass before merging
      * Require conversation resolution before merging
 
-### Why don't you use poetry?
+- **Why don't you use poetry?**
 Poetry is a great tool, but I find that it is not as widely used as pip and setuptools.
 You are more than welcome to use poetry instead of pip and setuptools, but I have chosen to use pip and setuptools for this template as due to
 the wider adoption.
 
-### Why don't you use black?
+- **Why don't you use black?**
 I really like Black it is a wonderful too. However ruff implements almost the same functionality and more at the same speed or faster.
 This also means that you do not need to install an extra dependency.
 
