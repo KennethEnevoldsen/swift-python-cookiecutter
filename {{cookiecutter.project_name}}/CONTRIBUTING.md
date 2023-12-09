@@ -13,7 +13,7 @@ Here is a list of important resources for contributors:
 
 [MIT license]: https://opensource.org/licenses/MIT
 [source code]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
-[documentation]: https://{{cookiecutter.project_name}}.readthedocs.io/
+[documentation]: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/index.html
 [issue tracker]: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues
 
 ## How to report a bug
