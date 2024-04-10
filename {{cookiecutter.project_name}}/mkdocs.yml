@@ -58,7 +58,7 @@ plugins:
         python:
           paths: [src]
           type: python
-          root_package: { { cookiecutter.package_name } }
+          root_package: {{ cookiecutter.package_name }}
           docstring_style: google
           options:
             heading_level: 3
