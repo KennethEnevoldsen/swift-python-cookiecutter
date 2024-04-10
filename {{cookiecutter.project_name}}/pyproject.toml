@@ -27,7 +27,7 @@ name = "MIT"
 dev = [
   "cruft>=2.0.0",
   "pyright>=1.1.338",
-  "ruff>=0.0.254",
+  "ruff>=0.3.0",
   "pyproject-parser[cli, readme]>=0.9.1",
 ]
 tests = ["pytest>=7.1.3", "pytest-cov>=3.0.0", "pytest-xdist"]
@@ -55,9 +55,9 @@ pythonPlatform = "Darwin"
 [tool.ruff]
 line-length = 150
 target-version = "py39"
+extend-include = ["*.ipynb"]
 
 [tool.ruff.lint]
-extend-include = ["*.ipynb"]
 # Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
 select = [
   "A",
