@@ -57,6 +57,7 @@ line-length = 150
 target-version = "py39"
 
 [tool.ruff.lint]
+extend-include = ["*.ipynb"]
 # Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
 select = [
   "A",
