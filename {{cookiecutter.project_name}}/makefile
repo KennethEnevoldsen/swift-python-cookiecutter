@@ -14,7 +14,7 @@ lint:
 
 test:
 	@echo "--- 🧪 Running tests ---"
-	pytest tests/
+	pytest tests/ -n auto --durations=5
 
 pr:
 	@echo "--- 🚀 Running PR checks ---"

@@ -37,7 +37,7 @@ The template comes with a Makefile containing a few commands to help you get sta
 To initialize as a git repo simply use the git init command.
 ```bash
 cd {package_name}
-git init -b main    
+git init -b main
 ```
 
 If you want to add a remote like GitHub you can do so using the following command:

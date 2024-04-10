@@ -1,15 +1,19 @@
-# GitHub action to run linting
+# THIS ACTION WILL:
+  # Install dependencies
+  # Run linting
 
-name: run-linting
+# SETUP:
+  # None required, except for the Makefile
+
+name: lint
 
 on:
-  pull_request:
-    branches: [main]
   push:
     branches: [main]
+  pull_request:
 
 jobs:
-  pre-commit:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

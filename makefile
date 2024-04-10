@@ -5,6 +5,8 @@ install:
 
 create-new-project:
 	@echo "---  📦 Creating project using template ---"
+	@echo "Delete the folder 'swift-python' if it exists"
+	rm -rf swift-python
 	@echo "Creates the folder 'swift-python'"
 	cruft create . -y
 
