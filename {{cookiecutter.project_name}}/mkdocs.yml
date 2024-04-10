@@ -1,4 +1,4 @@
-site_name: {{ cookiecutter.friendly_name }}
+site_name: { { cookiecutter.friendly_name } }
 docs_dir: "docs/"
 repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
 watch: [src/, docs/]
@@ -30,6 +30,7 @@ theme:
     accent: light blue
 
 markdown_extensions:
+  - admonition
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -49,14 +50,15 @@ nav:
       - api/docs_example.md
 
 plugins:
-  - mkdocs-jupyter
+  - mkdocs-jupyter:
+      execute: False
   - search
   - mkdocstrings:
       handlers:
         python:
           paths: [src]
           type: python
-          root_package: {{ cookiecutter.package_name }}
+          root_package: { { cookiecutter.package_name } }
           docstring_style: google
           options:
             heading_level: 3
