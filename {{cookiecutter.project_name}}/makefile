@@ -6,6 +6,11 @@ static-type-check:
 	@echo "--- 🔍 Running static type check ---"
 	pyright .
 
+lint-check:
+	@echo "--- 🧹 Check is project is linted ---"
+	ruff format . --check						    # running ruff formatting
+	ruff check **/*.py 						        # running ruff linting
+
 lint:
 	@echo "--- 🧹 Running linters ---"
 	pyproject-parser check pyproject.toml 		# check pyproject.toml
