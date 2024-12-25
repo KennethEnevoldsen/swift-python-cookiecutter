@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/{{cookiecutter.project_name}})][pypi status]
 [![documentation](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/documentation.yml/badge.svg)][documentation]
 [![Tests](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/tests.yml/badge.svg)][tests]
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)]([ruff])
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)][ruff]
 
 
 [pypi status]: https://pypi.org/project/{{cookiecutter.project_name}}/

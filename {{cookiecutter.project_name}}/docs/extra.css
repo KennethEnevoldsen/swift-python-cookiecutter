@@ -1,0 +1,5 @@
+/* Hide Jupyter Notebook input/output prompts */
+.jp-InputPrompt,
+.jp-OutputPrompt {
+    display: none !important;
+}
