@@ -1,14 +1,20 @@
 
+add-uv:
+	@echo "--- 🚀 Installing UV ---"
+	curl -LsSf https://astral.sh/uv/install.sh | sh
+	# for windows:
+	# powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
 install:
-	@echo "--- 🚀 Installing project ---"
-	pip install -r requirements.txt
+	@echo "--- 🚀 Installing project depenencies ---"
+	uv sync
 
 create-new-project:
 	@echo "---  📦 Creating project using template ---"
 	@echo "Delete the folder 'swift-python' if it exists"
 	rm -rf swift-python
 	@echo "Creates the folder 'swift-python'"
-	cruft create . -y
+	uv run cruft create . -y
 
 run-all-tests-in-project:
 	@echo "--- 🧪 Running all tests in project ---"
@@ -21,7 +27,7 @@ run-all-tests-in-project:
 
 lint:
 	@echo "--- 🚀 Linting project ---"
-	ruff format .
+	uv run ruff format .
 
 test:
 	@echo "--- 🧪 Testing project ---"

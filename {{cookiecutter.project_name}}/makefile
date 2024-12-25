@@ -8,12 +8,12 @@ static-type-check:
 
 lint-check:
 	@echo "--- 🧹 Check is project is linted ---"
+	# Required for CI to work, otherwise it will just pass
 	ruff format . --check						    # running ruff formatting
 	ruff check **/*.py 						        # running ruff linting
 
 lint:
 	@echo "--- 🧹 Running linters ---"
-	pyproject-parser check pyproject.toml 		# check pyproject.toml
 	ruff format .  								# running ruff formatting (.ipynb, .py)
 	ruff check **/*.py --fix  				    # running ruff linting (.py)
 
@@ -40,5 +40,5 @@ view-docs:
 update-from-template:
 	@echo "--- 🔄 Updating from template ---"
 	@echo "This will update the project from the template, make sure to resolve any .rej files"
-	cruft update --skip-apply-ask
+	uv cruft update --skip-apply-ask
 	

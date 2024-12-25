@@ -17,26 +17,21 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
 ]
 requires-python = ">=3.9"
 dependencies = []
+
 [project.license]
 file = "LICENSE"
-name = "MIT"
+
 [project.optional-dependencies]
-dev = [
-  "cruft>=2.0.0",
-  "pyright>=1.1.338",
-  "ruff>=0.3.0",
-  "pyproject-parser[cli, readme]>=0.9.1",
-]
-tests = ["pytest>=7.1.3", "pytest-cov>=3.0.0", "pytest-xdist"]
+dev = ["cruft>=2.0.0", "pyright>=1.1.338", "ruff>=0.3.0"]
+tests = ["pytest>=7.1.3", "pytest-cov>=3.0.0", "pytest-xdist>=0.0.0"]
 docs = [
-  "mkdocs-jupyter==0.24.2",
   "mkdocs-material==9.1.21",
-  "mkdocstrings[python]==0.22.0",
-  # for tutorials
-  "jupyter>=1.0.0",
+  "mkdocs-jupyter>=0.25.1",
+  "mkdocstrings-python>=1.12.2",
 ]
 
 [project.readme]
@@ -97,7 +92,6 @@ ignore = [
   "RET504",
   "COM812",
 ]
-ignore-init-module-imports = true
 # Allow autofix for all enabled rules (when `--fix`) is provided.
 unfixable = ["ERA"]
 # Exclude a variety of commonly ignored directories.

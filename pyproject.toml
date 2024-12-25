@@ -1,0 +1,7 @@
+[project]
+name = "swift-python-cookiecutter"
+version = "1.0.0"
+description = "A Python package template intended for creating a package with simple yet effective workflows to start package development."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["cruft>=2.16.0", "ruff>=0.8.4"]

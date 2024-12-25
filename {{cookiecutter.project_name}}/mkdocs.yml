@@ -1,4 +1,4 @@
-site_name: {{ cookiecutter.friendly_name }}
+site_name: { { cookiecutter.friendly_name } }
 docs_dir: "docs/"
 repo_url: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}
 watch: [src/, docs/]
@@ -51,14 +51,14 @@ nav:
 
 plugins:
   - mkdocs-jupyter:
-      execute: False
+      execute: True
   - search
   - mkdocstrings:
       handlers:
         python:
           paths: [src]
           type: python
-          root_package: {{ cookiecutter.package_name }}
+          root_package: { { cookiecutter.package_name } }
           docstring_style: google
           options:
             heading_level: 3
