@@ -18,6 +18,10 @@
 
 TODO: Add a short description of the project.
 
+!!! note
+
+    This an an example of an [adminition](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
+
 <!-- end short-description -->
 
 
