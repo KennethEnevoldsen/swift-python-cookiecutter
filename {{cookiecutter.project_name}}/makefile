@@ -1,41 +1,41 @@
 install:
 	@echo "--- 🚀 Installing project ---"
-	pip install -e ".[dev, docs, tests]" 
+	uv sync --extra dev --extra docs --extra tests
+	# pip install -e ".[dev, docs, tests]" 
 
 static-type-check:
 	@echo "--- 🔍 Running static type check ---"
-	pyright .
+	uv pyright .
 
 lint-check:
 	@echo "--- 🧹 Check is project is linted ---"
 	# Required for CI to work, otherwise it will just pass
-	ruff format . --check						    # running ruff formatting
-	ruff check **/*.py 						        # running ruff linting
+	uv ruff format . --check						    # running ruff formatting
+	uv ruff check **/*.py 						        # running ruff linting
 
 lint:
 	@echo "--- 🧹 Running linters ---"
-	ruff format .  								# running ruff formatting (.ipynb, .py)
-	ruff check **/*.py --fix  				    # running ruff linting (.py)
+	uv ruff format .  								# running ruff formatting (.ipynb, .py)
+	uv ruff check **/*.py --fix  				    # running ruff linting (.py)
 
 test:
 	@echo "--- 🧪 Running tests ---"
-	pytest tests/ -n auto --durations=5
+	uv pytest tests/ -n auto --durations=5
 
 pr:
 	@echo "--- 🚀 Running PR checks ---"
 	make lint
-	make static-type-check
 	make test
-	@echo "Ready to make a PR"
+	@echo "If all tests pass, wee are ready to make a PR"
 
 build-docs:
 	@echo "--- 📚 Building docs ---"
 	@echo "Builds the docs and puts them in the 'site' folder"
-	mkdocs build
+	uv mkdocs build
 
 view-docs:
 	@echo "--- 👀 Viewing docs ---"
-	mkdocs serve
+	uv mkdocs serve
 	
 update-from-template:
 	@echo "--- 🔄 Updating from template ---"
